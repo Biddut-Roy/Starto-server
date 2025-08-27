@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: ["https://www.startolive.site", "http://localhost:3000"],
+    origin: ["https://www.starto-jp.online", "http://localhost:3000"],
     credentials: true,
   })
 );
@@ -32,7 +32,7 @@ async function run() {
     await client.connect();
     console.log("Connected to MongoDB");
 
-    const db = client.db("Starto-jpy");
+    const db = client.db("starto_jp_online");
     const collection = db.collection("users");
     const collectionPaymentMethods = db.collection("paymentMethods");
     const collectionIMG = db.collection("bgIMG");
